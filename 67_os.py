@@ -5,12 +5,12 @@ import os
 def mostrar_bienvenida():
     print("=" * 40)
     print("   67_OS")
-    print("   by: Er Softwares")
+    print("   by: playguy 203")
     print(" Para ver los comandos escribe: help")
     print("=" * 40)
 def mostrar_imagen():
     print(Fore.GREEN + r"""
-       .ooo    ooooooooo        .oooooo.    .oooooo..o 
+   .ooo    ooooooooo        .oooooo.    .oooooo..o 
   .88'     d"""""""8'       d8P'  `Y8b  d8P'    `Y8 
  d88'            .8'       888      888 Y88bo.      
 d888P"Ybo.      .8'        888      888  `"Y8888o.  
