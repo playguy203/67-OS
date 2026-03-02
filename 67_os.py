@@ -23,19 +23,28 @@ def shell():
     while True:
         comando = input("> ").strip()
 
-        if comando == "help":
+        if comando.lower() == "help":
             print("Comandos disponibles:")
-            print(" help  - muestra esta ayuda")
-            print(" cls   - limpia la pantalla")
-            print(" echo  - repite texto")
-            print(" exit  - salir")
-            print(" run   - ejecutar un programa, debes añadir la ruta completa ej: run C:\Windows\System32\notepad.exe")
-
+            print(" help           - muestra esta ayuda")
+            print(" dir            - lista archivos y carpetas del directorio actual")
+            print(" run <archivo>  - ejecuta un programa (.exe, .bat, etc.)")
+            print(" cls            - limpia la pantalla")
+            print(" echo <texto>   - repite el texto")
+            print(" exit           - salir del sistema")
+            
         elif comando == "cls":
             print("\n" * 50)
 
         elif comando.startswith("echo "):
             print(comando[5:])
+
+        elif comando.lower() == "dir":
+            try:
+                archivos = os.listdir(os.getcwd())
+                for archivo in archivos:
+                    print(archivo)
+            except Exception as e:
+                print("Error al listar el directorio")
 
         elif comando == "exit":
             print("Apagando 67 OS...")
